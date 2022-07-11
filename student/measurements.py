@@ -48,7 +48,20 @@ class Sensor:
         # otherwise False.
         ############
 
-        return True
+        pos_veh = np.ones((4,1))
+        pos_veh[0:3] = x[0:3]
+
+        pos_sens = self.veh_to_sens * pos_veh
+
+        visible = False
+
+        if pos_sens[0] > 0:
+            alpha = np.arctan(pos_sens[1] / pos_sens[0] )
+
+            if alpha > self.fov[0] and alpha < self.fov[1]:
+                visible = True
+
+        return visible
         
         ############
         # END student code
@@ -71,7 +84,20 @@ class Sensor:
             # - return h(x)
             ############
 
-            pass
+            #pass
+
+            pos_veh = np.ones((4, 1))
+            pos_veh[0:3] = x[0:3]
+            pos_sens = self.veh_to_sens*pos_veh
+
+            if pos_sens[0] == 0:
+                raise Exception('divide by zero error')
+
+            hx = np.zeros((2,1))
+            hx[0,0] = self.c_i - (self.f_i * pos_sens[1] ) / pos_sens[0]
+            hx[1,0] = self.c_j - (self.f_j * pos_sens[2] ) / pos_sens[0]
+
+            return hx
         
             ############
             # END student code
@@ -155,7 +181,17 @@ class Measurement:
             # TODO Step 4: initialize camera measurement including z, R, and sensor 
             ############
 
-            pass
+            #pass
+
+            self.z = np.zeros((sensor.dim_meas, 1))
+            self.z[0] = z[0]
+            self.z[1] = z[1]
+
+            self.sensor = sensor
+
+            self.R = np.matrix([\
+            [params.sigma_cam_i**2, 0], \
+            [0, sigma_cam_j**2]])
         
             ############
             # END student code
