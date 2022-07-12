@@ -18,7 +18,7 @@ To enable multi-traking, track management and association are essetial.
   2. gating function: to reduce the association time complexity.
   3. associate function: to compute the distance between objects in tracks and objects in measurements.
 
-  The following figure shows multi-traking results:
+  The following figure shows multi-traking results for lidar data only:
   
   <img src="./Figure_3_2.png" width="400" height="300" />
 
