@@ -31,8 +31,9 @@ The last module is camera fusion. In this module, measurements is the target to 
   
   <img src="./Figure_4_2.png" width="400" height="300" />
 
+[Sample output video can be found from here](./results/my_tracking_results.avi)
 
-<video src='./results/my_tracking_results.avi' width=400/> 
+The challenging part is camera fusion. It raised questions such as what if more cameras were added. Also detailed physics and detailed design principles are of big concern to me. Finally, how these sensors dimensions, angles, etc are computed.
 
 ### 2. Do you see any benefits in camera-lidar fusion compared to lidar-only tracking (in theory and in your concrete results)? 
 
