@@ -31,6 +31,9 @@ The last module is camera fusion. In this module, measurements is the target to 
   
   <img src="./Figure_4_2.png" width="400" height="300" />
 
+
+![](./results/my_tracking_results.avi){width="400" height="300"}
+
 ### 2. Do you see any benefits in camera-lidar fusion compared to lidar-only tracking (in theory and in your concrete results)? 
 
 What can be detected by lidar might be missed by camera, and vice versa. Therefore, they should complement each other and hence improve tracking results as result, theoritically. 
