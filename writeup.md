@@ -33,6 +33,13 @@ The last module is camera fusion. In this module, measurements is the target to 
 
 ### 2. Do you see any benefits in camera-lidar fusion compared to lidar-only tracking (in theory and in your concrete results)? 
 
+What can be detected by lidar might be missed by camera, and vice versa. Therefore, they should complement each other and hence improve tracking results as result, theoritically. 
+
+Even though there are improvments in tracking RMSE, improvements couldn't be observed. The following error in detection couldn't be resolved after fusion:
+
+<img src="./Figure_3_1_tentative.png" width="400" height="300" />
+
+The examples presented in this project show straight street and a few vehicles. In complext scenarios, data fusion will be more appreciated.
 
 ### 3. Which challenges will a sensor fusion system face in real-life scenarios? Did you see any of these challenges in the project?
 
