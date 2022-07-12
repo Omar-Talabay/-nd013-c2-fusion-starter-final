@@ -6,7 +6,8 @@ Please use this starter template to answer the following questions:
 
 The projects starts with implementing a simple Kalman filter as Filter class. Covariance matrices are retrieved and predict/update functions are filled.
 RMSE is .35 as appears in the following figure:
-<img src="./Figure_1_2.png" width="500" height="600" />
+
+<img src="./Figure_1_2.png" width="400" height="300" />
 
 Track management: This class is responsible for adding/removing tracks and objects to the track list comming from measurments. Dealing with unassigned tracks and deleting old tracks or tracks that are bellow a certain threshold is dealt with. Also adjusting track score for unassigned track is implemented.
 
