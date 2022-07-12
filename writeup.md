@@ -18,12 +18,18 @@ To enable multi-traking, track management and association are essetial.
   2. gating function: to reduce the association time complexity.
   3. associate function: to compute the distance between objects in tracks and objects in measurements.
 
-  The following figure shows multi-traking results for lidar data only:
+  The following figure shows multi-traking results for lidar data only in terms of root mean squared error (RMSE):
   
   <img src="./Figure_3_2.png" width="400" height="300" />
 
 
+The last module is camera fusion. In this module, measurements is the target to fill. The following are the main points implemented:
+  1. in_fov function: a kind of confirmation, if an object detected in a sensor not seen in the other one, its confidence score is decreased.
+  2. Compute the nonlinear camera measurements to be used in kalman filter.
 
+  What follows is the results, RMSE, of multi-target traking using lidar and camera. It can be notices that there is improvents compared to the previous figure.
+  
+  <img src="./Figure_4_2.png" width="400" height="300" />
 
 ### 2. Do you see any benefits in camera-lidar fusion compared to lidar-only tracking (in theory and in your concrete results)? 
 
