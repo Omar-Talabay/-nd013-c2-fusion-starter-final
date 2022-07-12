@@ -14,9 +14,9 @@ To enable multi-traking, track management and association are essetial.
 * Track management: This class is responsible for adding/removing tracks and objects to the track list comming from measurments. Dealing with unassigned tracks and deleting old tracks or tracks that are bellow a certain threshold is dealt with. Also adjusting track score for unassigned track is implemented. Also coordinates transformation from/to vehicles is a part of this module.
 
 * Association: Every time a measurment is received and identified, linking objects with previously detected ones is the main part of this module. What follows is the main implemented parts:
-1 - Mahalanobis distance is implemented to compute the distance between detected measurements and already available objects in tracks. 
-2 - gating function: to reduce the association time complexity.
-3 - associate function: to compute the distance between objects in tracks and objects in measurements.
+1. Mahalanobis distance is implemented to compute the distance between detected measurements and already available objects in tracks. 
+2. gating function: to reduce the association time complexity.
+3. associate function: to compute the distance between objects in tracks and objects in measurements.
 
 
 
