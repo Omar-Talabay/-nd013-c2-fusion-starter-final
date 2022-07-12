@@ -43,6 +43,17 @@ The examples presented in this project show straight street and a few vehicles. 
 
 ### 3. Which challenges will a sensor fusion system face in real-life scenarios? Did you see any of these challenges in the project?
 
+Calibration and synchronization is challenging. In this project, one lidar and one camera is used. 
+
+Also, adding more sensors will increase the complexity of a sensor fusion system. This will raise a computational challenge.
+
 
 ### 4. Can you think of ways to improve your tracking results in the future?
+
+A tracking system in this context relies on accurate object detection and recognition. Thus first thing is to ensure the detection accuracy.
+
+Instead of using simple association method, other techniqes such as Global Nearest Neighbor (GNN) or Joint Probabilistic Data Association (JPDA) can be used.
+
+Kalman filter is linear, using non-linear tracker would be helpful.
+
 
